@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="main.js"></script>
+    <title>Wagner Rafael - Portfolio</title>
+</head>
+<body>
+    
+    <main>
+        <aside>
+            <!-- Logo AIExxplorer -->
+            <div class="logo-container">
+                <img src="Assets/Images/LOGO_AIEXXPLORER.png" alt="AIExxplorer Logo" class="menu-logo">
+            </div>
+        
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+                    <p>About Me</p>
+                </li>
+                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                    <p>Services</p>
+                </li>
+                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                    <p>Projects</p>
+                </li>
+                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                    <p>Contact Me</p>
+                </li>
+            </ul>
+        
+            <!-- Logo Artificial Universe -->
+            <div class="logo-container">
+                <img src="Assets/Images/LOGO_AU.png" alt="Artificial Universe Logo" class="menu-logo">
+            </div>
+        </aside>
+        
+        <div class="swiper mySwiper">
+            <div class="SlideContainer swiper-wrapper">
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Hi! I'm <span class="stylized-name">Wagner Rafael</span>,</h1>
+                        <h2>A <span class="proffesions">Full-Stack Developer & AI Engineer</span></h2>
+                        <p class="heroline">Specialized in innovative and collaborative technology solutions. Passionate about AI, open-source, and career development.</p>
+                        <div class="buttonGroup">
+                            <button onclick="window.location.href='https://github.com/AIExxplorer'">GitHub</button>
+                            <button onclick="window.location.href='https://linkedin.com/in/AIExxplorer'">LinkedIn</button>
+                            <button onclick="window.location.href='https://drive.google.com/file/d/1OgVRWREYpLHASZvDdHZybzfwq3cP8ybD/view?usp=sharing'">Download CV</button>
+                        </div>
+                    </div>
+                    <div class="SideImg">
+                        <div class="top-right-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                        <img src="https://utfs.io/f/LHbyWnn8DdVPJDQVXEU0Y4TQMEHhVPXvpB19Wg5fzj8UiKuR" alt="ProfilePic">
+                        <div class="bottom-left-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                    </div>
+                    <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i>
+                    </p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="about-us">
+                    <h1 class="heading"><i class="fa-solid fa-user"></i> About Me</h1>
+                    <h3 class="sub-heading">I'm Wagner Rafael, <span class="proffesions">A Full-Stack Developer & AI Engineer</span></h3>
+                    <p class="aboutme-deatils">
+With extensive experience in artificial intelligence and software engineering, I lead technological projects at Artificial Universe and specialize in creating impactful open-source projects. My background also includes roles as CTO and AI researcher, contributing to groundbreaking solutions in the tech industry.
+                    </p>
+                    <div class="about-me-divison">
+                        <div class="about-me-table">
+                            <li><span>Experience:</span> 5+ years</li>
+                            <li><span>Country:</span> Brazil</li>
+                            <li><span>Availability:</span> 24/7 </li>
+                            <li><span>Satisfied Clients:</span>50+</li>
+                            <li><span>Age:</span> 29</li>
+                            <li><span>Phone:</span> +55 (31) 97129-5198</li>
+                            <li><span>Languages:</span> Portuguese, English, French, Spanish</li>
+                            <li><span>Degree:</span> Analysis and Systems Development</li>
+                            <div class="buttonGroup"><button>GitHub</button><button>LinkedIn</button><button>Download CV</button></div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-column">
+                                <li>
+                                    <p>HTML</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:99%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>CSS</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:90%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>JavaScript</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:95%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Python</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:85%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>React</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:90%"></div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="skill-column">
+                                <li>
+                                    <p>TypeScript</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Tailwind CSS</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:75%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Next.js</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:70%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Java</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:65%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>PHP</p>
+                                    <div class="bar">
+                                        <div class="active-bar" style="width:60%"></div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div></div>
+                <div class="swiper-slide services">
+                    <h1 class="heading"><i class="fa-solid fa-cogs"></i> Services</h1>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h2>Web Design</h2>
+                        <p>Creating visually engaging, user-centered web designs to enhance user experiences.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h2>Web Development</h2>
+                        <p>Developing scalable, robust web applications with a focus on clean code and functionality.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h2>SEO</h2>
+                        <p>Improving website visibility and performance through strategic SEO implementations.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        <h2>Database Administration</h2>
+                        <p>Ensuring data integrity and efficient access with comprehensive database management.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h2>AI Development</h2>
+                        <p>Developing AI-driven applications that bring automation and intelligence to the forefront.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h2>Network Architecture</h2>
+                        <p>Designing resilient network solutions to support secure and efficient data flow.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide gallery">
+                    <h1 class="heading"><i class="fa-solid fa-folder-open"></i> Projects</h1>
+                
+                    <div class="project">
+                        <a href="https://aiexxplorer.github.io/ChatBot-Jarvis/" target="_blank">
+                            <img src="https://utfs.io/f/750adfcb-f783-4f2f-9bb5-f57f1a680b40-tmf4h4.gif" alt="ChatBot Jarvis">
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="https://github.com/AIExxplorer/ACERVO_DE_TECNOLOGIA" target="_blank">
+                            <img src="https://utfs.io/f/021e1e1f-be6a-410c-8445-88b27bce8964-7kj6bl.gif" alt="Acervo de Tecnologia">
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="https://github.com/AIExxplorer/ACERVO_DE_PSICOLOGIA" target="_blank">
+                            <img src="https://utfs.io/f/e91740a8-783c-48a2-8466-73e71abb0e1f-o6e9db.gif" alt="Acervo de Psicologia">
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="https://github.com/AIExxplorer/ACERVO_DE_MEDICINA_VETERINARIA" target="_blank">
+                            <img src="https://utfs.io/f/LHbyWnn8DdVPAnQPhWsaBlNJLMwyfgx6q0149QGtRbDIc2ZX" alt="Acervo de Medicina Veterinária">
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="https://github.com/Artificial-Universe?view_as=public" target="_blank">
+                            <img src="https://utfs.io/f/6ov3IFp9DdJy3TpI7WVHkeuVta8RFIG3Awh9DciZljmrs0bQ" alt="Organização Artificial Universe">
+                        </a>
+                    </div>
+                    
+                    <div class="project">
+                        <a href="https://a.co/d/80By264" target="_blank">
+                            <img src="https://utfs.io/f/6ov3IFp9DdJyVhYqHfxK39lRn65LDuwzJaFfrqc8GjS7tMpv" alt="Livro Como Pensar">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide contactMe">
+                    <h1 class="heading"><i class="fa-solid fa-envelope"></i> Contact Me</h1>
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Mobile No</h3>
+                        <p>+55 (31) 97129-5198</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+                        <h3>Location</h3>
+                        <p>Belo Horizonte, MG, Brazil</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>aiexxplorer@artificialuniverse.tech</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>https://www.artificialuniverse.tech</p>
+                    </div>
+                    <form method="POST" action="send_email.php">
+                        <h2>Send Me A Message 
+                            <div class="SocialLinks">
+                                <a href="https://linkedin.com/in/AIExxplorer"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/AIExxplorer"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.instagram.com/artificialuniverseorg/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://github.com/Artificial-Universe"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </h2>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" rows="10" placeholder="Type your Message Here..." required></textarea>
+                        <button type="submit" class="primary">Send</button>
+                    </form>                    
+                    <footer>
+                        <li>&copy; 2024 AIExxplorer | Wagner Rafael | ArtificialUniverse</li>
+                    </footer>
+                </div>
+            </div>
+    </main>
+
+</body>
+</html>
