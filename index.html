@@ -8,10 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script defer src="main.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("Y8lQkIxEzRV1tSZA4"); // PK
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault(); // Previne o comportamento padrão do envio do formulário
+
+            emailjs.sendForm('service_fxkm2sd', 'template_mrj96lo', event.target)
+                .then(function() {
+                    alert('Email enviado com sucesso!');
+                }, function(error) {
+                    alert('Ocorreu um erro ao enviar o email: ' + JSON.stringify(error));
+                });
+        }
+    </script>
     <title>Wagner Rafael - Portfolio</title>
 </head>
 <body>
-    
     <main>
         <aside>
             <!-- Logo AIExxplorer -->
@@ -156,7 +172,6 @@ With extensive experience in artificial intelligence and software engineering, I
                                 </li>
                             </div>
                         </div>
-                        
                     </div>
                 </div></div>
                 <div class="swiper-slide services">
@@ -250,7 +265,7 @@ With extensive experience in artificial intelligence and software engineering, I
                         <h3>Website</h3>
                         <p>https://www.artificialuniverse.tech</p>
                     </div>
-                    <form method="POST" action="send_email.php">
+                    <form onsubmit="sendEmail(event)">
                         <h2>Send Me A Message 
                             <div class="SocialLinks">
                                 <a href="https://linkedin.com/in/AIExxplorer"><i class="fa-brands fa-linkedin"></i></a>
@@ -270,6 +285,5 @@ With extensive experience in artificial intelligence and software engineering, I
                 </div>
             </div>
     </main>
-
 </body>
 </html>
