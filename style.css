@@ -529,7 +529,7 @@ form h2 .SocialLinks i:hover {
 }
 
 .SocialLinks a .fa-github:hover {
-    color: #8fbffd;
+    background-color: #8fbffd;
 }
 
 /* Define a cor padrão para os ícones do Instagram */
@@ -538,7 +538,7 @@ form h2 .SocialLinks i:hover {
 }
 
 .SocialLinks a .fa-instagram:hover {
-    color: #8fbffd;
+    background-color: #8fbffd;
 }
 
 /* Media Queries para Responsividade */
