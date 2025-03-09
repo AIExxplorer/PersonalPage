@@ -1,3 +1,6 @@
+
+[![Status do Projeto](https://img.shields.io/badge/Status-Aguardando%20Atualizações-orange.svg)](#)
+
 # Portfólio de Wagner Rafael
 
 Bem-vindo ao repositório do meu portfólio! Este projeto exibe minhas habilidades, projetos e experiências na área de desenvolvimento Full-Stack e Engenharia de IA. O portfólio foi desenvolvido com uma interface interativa e responsiva, com seções detalhadas sobre meus serviços, projetos e informações de contato.
