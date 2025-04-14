@@ -73,7 +73,31 @@ aside li i {
 
 .mySwiper {
     flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1e2023;
+}
+
+.swiper-slide {
+    width: 100%;
+    background-color: #1e2023;
     height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3257d1 #1e2023;
+}
+
+.swiper-slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.swiper-slide::-webkit-scrollbar-track {
+    background: #1e2023;
+}
+
+.swiper-slide::-webkit-scrollbar-thumb {
+    background-color: #3257d1;
+    border-radius: 20px;
 }
 
 .home-slide {
@@ -197,30 +221,20 @@ aside li i {
     font-size: 1.2rem;
 }
 
-.mySwiper {
-    width: 80vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #1e2023;
-}
-
-.swiper-slide {
-    width: 100%;
-    background-color: #1e2023;
-    height: 100%;
-}
-
 .about-us {
     width: 100%;
     height: 100%;
-    padding: 100px;
+    padding: 80px;
     color: white;
+    overflow-y: auto;
 }
 
-.heading {
-    padding: 20px 10px;
-    font-size: 2.5rem;
-    color: #ffffff;
+.about-us .heading {
+    position: sticky;
+    top: 0;
+    background-color: #1e2023;
+    z-index: 2;
+    padding-top: 20px;
 }
 
 .about-us h3 {
@@ -307,18 +321,26 @@ aside li i {
     border-radius: 20px;
 }
 
-
 .services {
     color: white;
     display: grid;
-    grid-template-columns: repeat(3, calc(34% - 10px));
-    grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
-    padding: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 80px;
     box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
+    align-items: start;
 }
 
 .services .heading {
     grid-column: 1 / span 3;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #1e2023;
+    z-index: 2;
+    padding-top: 20px;
 }
 
 .services .service {
@@ -328,10 +350,11 @@ aside li i {
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.437);
     border-radius: 5px;
-    margin: 20px;
     backdrop-filter: blur(10px);
     flex-direction: column;
     transition-duration: 0.25s;
+    height: 100%;
+    min-height: 220px;
 }
 
 .services .service i {
@@ -361,14 +384,20 @@ aside li i {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
-    padding: 100px;
-    grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 80px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
-.gallery h1,
-.gallery h2 {
+.gallery h1 {
     grid-column: 1 / span 3;
+    position: sticky;
+    top: 0;
+    background-color: #1e2023;
+    z-index: 2;
+    padding-top: 20px;
 }
 
 .gallery h2 {
@@ -397,19 +426,28 @@ aside li i {
 .contactMe {
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 80px calc(25% - 20px) calc(25% - 20px) calc(25% - 20px) calc(25% - 20px);
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
     position: relative;
-    padding: 100px;
+    padding: 80px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .contactMe h1 {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
     font-size: 2.5rem;
-    padding: 30px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #1e2023;
+    z-index: 2;
 }
 
 .contactMe form {
-    grid-area: 2 / 2 / span 5 / span 2;
+    grid-column: 2;
+    grid-row: 2 / span 4;
 }
 
 .contactinfo {
@@ -420,6 +458,7 @@ aside li i {
     justify-content: center;
     text-align: center;
     align-items: center;
+    height: auto;
 }
 
 .contactinfo i {
@@ -487,17 +526,21 @@ aside li i {
 
 footer {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     color: white;
     width: 100%;
     font-weight: 200;
     font-size: 0.8rem;
+    padding: 10px 0;
+    z-index: 10;
 }
 
 footer li {
-    padding: 10px;
+    padding: 5px;
+    list-style-type: none;
 }
 
 form h2 .SocialLinks {
@@ -543,7 +586,7 @@ form h2 .SocialLinks i:hover {
 
 /* Media Queries para Responsividade */
 
-/* Para dispositivos tablets */
+/* Para dispositivos tablets e menores */
 @media (max-width: 1024px) {
     .HomeContent h1 {
         font-size: 2.5em;
@@ -558,7 +601,36 @@ form h2 .SocialLinks i:hover {
     }
 
     .services {
-        grid-template-columns: 1fr; /* Exibe serviços em uma única coluna */
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        padding: 50px;
+    }
+    
+    .services .heading {
+        grid-column: 1 / span 2;
+    }
+    
+    .HomeContent {
+        padding: 50px;
+    }
+    
+    .about-us {
+        padding: 50px;
+    }
+    
+    .gallery {
+        padding: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+    
+    .gallery h1 {
+        grid-column: 1 / span 2;
+    }
+    
+    .contactMe {
+        grid-template-columns: 30% 70%;
+        padding: 50px;
     }
 }
 
@@ -575,39 +647,148 @@ form h2 .SocialLinks i:hover {
         z-index: 1000;
         background-color: #000000;
     }
+    
+    .logo-container {
+        display: none; /* Esconder logos no menu mobile */
+    }
 
     .Links {
         flex-direction: row;
+        margin: auto;
     }
 
     .Links li {
         padding: 10px;
         font-size: 0.8rem;
     }
+    
+    aside li p {
+        font-size: 0.7rem;
+    }
 
     .mySwiper {
         width: 100%;
         padding-bottom: 60px; /* Para dar espaço para o menu no mobile */
+    }
+    
+    .home-slide {
+        flex-direction: column;
+    }
+    
+    .HomeContent {
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .SideImg {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .about-me-divison {
+        flex-direction: column;
+    }
+    
+    .about-me-table {
+        width: 100%;
+    }
+    
+    .skill-bar {
+        flex-direction: column;
+    }
+    
+    .skill-column {
+        width: 100%;
+    }
+    
+    .services {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        grid-gap: 15px;
+    }
+    
+    .services .heading {
+        grid-column: 1;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    
+    .gallery h1,
+    .gallery h2 {
+        grid-column: 1;
+    }
+    
+    .contactMe {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 30px;
+        gap: 5px;
+    }
+    
+    .contactMe h1 {
+        grid-column: 1;
+    }
+    
+    .contactinfo {
+        grid-column: 1;
+        margin-bottom: 10px;
+    }
+    
+    .contactMe form {
+        grid-column: 1;
+        grid-row: auto;
+        grid-template-columns: 1fr;
+    }
+    
+    .contactMe form h2 {
+        grid-column: 1;
+    }
+    
+    .contactMe form input,
+    .contactMe form textarea {
+        grid-column: 1;
+    }
+    
+    footer {
+        position: relative;
+        margin-top: 20px;
+        padding-bottom: 70px; /* Add extra padding to account for the fixed menu */
+    }
+    
+    /* Fix for iOS Safari 100vh issue */
+    .swiper-slide {
+        height: auto;
+        min-height: calc(100vh - 60px); /* Account for bottom nav */
     }
 }
 
 /* Ajustes adicionais para celulares */
 @media (max-width: 480px) {
     .HomeContent h1 {
-        font-size: 2em;
-    }
-
-    .HomeContent h2 {
         font-size: 1.8em;
     }
 
+    .HomeContent h2 {
+        font-size: 1.5em;
+    }
+
     .HomeContent .heroline {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding-right: 0;
     }
 
     .buttonGroup button {
-        font-size: 1rem;
-        padding: 8px 16px;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        margin: 3px;
+    }
+    
+    .buttonGroup {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .gallery .project img {
@@ -618,9 +799,78 @@ form h2 .SocialLinks i:hover {
         grid-template-columns: 1fr;
         padding: 10px;
     }
+    
+    .contactMe form h2 {
+        font-size: 1.2rem;
+        flex-direction: column;
+    }
+    
+    form h2 .SocialLinks {
+        margin: 10px auto 0;
+    }
+    
+    .heading {
+        font-size: 1.8rem;
+        padding: 15px 5px;
+    }
+    
+    .about-us h3 {
+        font-size: 1.2rem;
+    }
+    
+    .about-me-table {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-me-table li {
+        padding: 15px 10px;
+    }
+    
+    /* Fix for tiny screens */
+    main {
+        min-height: 100vh;
+        height: auto;
+    }
+}
 
-    .sideImage {
-        display: none; /* Esconder imagem lateral em telas pequenas */
+/* Ensure proper link behavior */
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* For better image loading */
+img[loading="lazy"] {
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"]:not([src]) {
+    opacity: 0;
+}
+
+/* Fix for Safari and iOS */
+@supports (-webkit-touch-callout: none) {
+    /* iOS specific CSS */
+    .mySwiper {
+        -webkit-overflow-scrolling: touch;
+        height: -webkit-fill-available;
+    }
+    
+    input, 
+    textarea {
+        -webkit-appearance: none;
+        border-radius: 10px;
+    }
+    
+    body, 
+    html, 
+    main {
+        height: -webkit-fill-available;
+    }
+    
+    .swiper-slide {
+        height: auto;
+        min-height: -webkit-fill-available;
     }
 }
 
@@ -642,5 +892,113 @@ form h2 .SocialLinks i:hover {
     width: 200px; /* Aumenta o tamanho da logo */
     height: auto; /* Mantém a proporção da imagem */
     max-width: 100%; /* Garante que a logo não ultrapasse a largura do container */
+}
+
+/* Global heading styles to ensure consistency */
+.heading {
+    padding: 20px 10px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Fix for swiper container */
+.mySwiper {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1e2023;
+}
+
+/* Fix for swiper slides */
+.swiper-slide {
+    width: 100%;
+    background-color: #1e2023;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3257d1 #1e2023;
+}
+
+/* Custom scrollbar for webkit browsers */
+.swiper-slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.swiper-slide::-webkit-scrollbar-track {
+    background: #1e2023;
+}
+
+.swiper-slide::-webkit-scrollbar-thumb {
+    background-color: #3257d1;
+    border-radius: 20px;
+}
+
+/* Fix navigation items */
+.nav-item {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #3257d1;
+}
+
+/* Fix for cube effect */
+.swiper-cube .swiper-cube-shadow {
+    background: #000;
+    opacity: 0.2;
+}
+
+/* Additional padding for page content to prevent overflow */
+.about-us, .services, .gallery, .contactMe {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* For larger screens */
+@media (min-width: 1025px) {
+    /* Service cards at 100% zoom */
+    .service {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .service p {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Project cards at 100% zoom */
+    .gallery .project {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+    }
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+    .services, .gallery, .contactMe, .about-us {
+        padding: 40px;
+        padding-top: 60px;
+    }
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .services, .gallery, .contactMe, .about-us {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    
+    /* Navigation icons on mobile */
+    aside li i {
+        font-size: 1.4rem;
+    }
 }
 
