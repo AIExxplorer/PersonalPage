@@ -55,11 +55,25 @@ document.addEventListener('DOMContentLoaded', function() {
         swiper.slideTo(index, 800, true);
     }
 
-    // Set up navigation click handlers
+    // Set up navigation click handlers for the li elements and their children
     document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function() {
+        // Add click handler to the li element
+        item.addEventListener('click', function(e) {
             const slideIndex = parseInt(this.getAttribute('data-slide'));
             navigateTo(slideIndex);
+        });
+        
+        // Add click handlers to child elements (icon and text)
+        const childElements = item.querySelectorAll('i, p');
+        childElements.forEach(childEl => {
+            childEl.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent double firing
+                const parentLi = this.closest('.nav-item');
+                if (parentLi) {
+                    const slideIndex = parseInt(parentLi.getAttribute('data-slide'));
+                    navigateTo(slideIndex);
+                }
+            });
         });
     });
 

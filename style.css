@@ -935,12 +935,22 @@ img[loading="lazy"]:not([src]) {
 }
 
 /* Fix navigation items */
-.nav-item {
+.nav-item, 
+.nav-item i, 
+.nav-item p {
     cursor: pointer;
     transition: color 0.2s ease;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:hover i,
+.nav-item:hover p {
+    color: #3257d1;
+}
+
+.activeLink,
+.activeLink i,
+.activeLink p {
     color: #3257d1;
 }
 
@@ -999,6 +1009,41 @@ img[loading="lazy"]:not([src]) {
     /* Navigation icons on mobile */
     aside li i {
         font-size: 1.4rem;
+    }
+}
+
+/* Make sure the text in menu items is properly aligned */
+aside li p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Enhance the touch target size on mobile */
+@media (max-width: 768px) {
+    aside li {
+        padding: 5px 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    aside li i {
+        font-size: 1.6rem;
+        margin-bottom: 2px;
+    }
+    
+    aside li p {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    
+    .nav-item, 
+    .nav-item i, 
+    .nav-item p {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
 }
 
