@@ -2,14 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Wagner Rafael - Full-Stack Developer & AI Engineer. Specialized in innovative technology solutions.">
+    <meta name="keywords" content="Wagner Rafael, Full-Stack Developer, AI Engineer, Web Development, Artificial Intelligence">
+    <meta name="author" content="Wagner Rafael">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.artificialuniverse.tech">
+    <meta property="og:title" content="Wagner Rafael - Full-Stack Developer & AI Engineer">
+    <meta property="og:description" content="Wagner Rafael - Full-Stack Developer & AI Engineer. Specialized in innovative and collaborative technology solutions.">
+    <meta property="og:image" content="https://utfs.io/f/LHbyWnn8DdVPJDQVXEU0Y4TQMEHhVPXvpB19Wg5fzj8UiKuR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.artificialuniverse.tech">
+    <meta property="twitter:title" content="Wagner Rafael - Full-Stack Developer & AI Engineer">
+    <meta property="twitter:description" content="Wagner Rafael - Full-Stack Developer & AI Engineer. Specialized in innovative and collaborative technology solutions.">
+    <meta property="twitter:image" content="https://utfs.io/f/LHbyWnn8DdVPJDQVXEU0Y4TQMEHhVPXvpB19Wg5fzj8UiKuR">
+    
+    <!-- Favicons for various devices -->
     <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon.ico">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script defer src="main.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
             emailjs.init("Y8lQkIxEzRV1tSZA4"); // PK
@@ -37,19 +63,19 @@
             </div>
         
             <ul class="Links">
-                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                <li data-slide="0" class="nav-item activeLink"><i class="fa-solid fa-house"></i>
                     <p>Home</p>
                 </li>
-                <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+                <li data-slide="1" class="nav-item"><i class="fa-solid fa-user"></i>
                     <p>About Me</p>
                 </li>
-                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                <li data-slide="2" class="nav-item"><i class="fa-solid fa-list"></i>
                     <p>Services</p>
                 </li>
-                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                <li data-slide="3" class="nav-item"><i class="fa-solid fa-images"></i>
                     <p>Projects</p>
                 </li>
-                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                <li data-slide="4" class="nav-item"><i class="fa-solid fa-comments"></i>
                     <p>Contact Me</p>
                 </li>
             </ul>
@@ -68,9 +94,9 @@
                         <h2>A <span class="proffesions">Full-Stack Developer & AI Engineer</span></h2>
                         <p class="heroline">Specialized in innovative and collaborative technology solutions. Passionate about AI, open-source, and career development.</p>
                         <div class="buttonGroup">
-                            <button onclick="window.location.href='https://github.com/AIExxplorer'">GitHub</button>
-                            <button onclick="window.location.href='https://linkedin.com/in/AIExxplorer'">LinkedIn</button>
-                            <button onclick="window.location.href='https://drive.google.com/file/d/1OgVRWREYpLHASZvDdHZybzfwq3cP8ybD/view?usp=sharing'">Download CV</button>
+                            <a href="https://github.com/AIExxplorer" class="btn-link"><button>GitHub</button></a>
+                            <a href="https://linkedin.com/in/AIExxplorer" class="btn-link"><button>LinkedIn</button></a>
+                            <a href="https://drive.google.com/file/d/1OgVRWREYpLHASZvDdHZybzfwq3cP8ybD/view?usp=sharing" class="btn-link"><button>Download CV</button></a>
                         </div>
                     </div>
                     <div class="SideImg">
@@ -78,7 +104,7 @@
                             <hr class="hr1">
                             <hr class="hr2">
                         </div>
-                        <img src="https://utfs.io/f/LHbyWnn8DdVPJDQVXEU0Y4TQMEHhVPXvpB19Wg5fzj8UiKuR" alt="ProfilePic">
+                        <img src="https://utfs.io/f/LHbyWnn8DdVPJDQVXEU0Y4TQMEHhVPXvpB19Wg5fzj8UiKuR" alt="Wagner Rafael - Full-Stack Developer & AI Engineer" loading="lazy">
                         <div class="bottom-left-corner">
                             <hr class="hr1">
                             <hr class="hr2">
@@ -104,7 +130,11 @@ With extensive experience in artificial intelligence and software engineering, I
                             <li><span>Phone:</span> +55 (31) 97129-5198</li>
                             <li><span>Languages:</span> Portuguese, English, French, Spanish</li>
                             <li><span>Degree:</span> Analysis and Systems Development</li>
-                            <div class="buttonGroup"><button>GitHub</button><button>LinkedIn</button><button>Download CV</button></div>
+                            <div class="buttonGroup">
+                                <a href="https://github.com/AIExxplorer" class="btn-link"><button>GitHub</button></a>
+                                <a href="https://linkedin.com/in/AIExxplorer" class="btn-link"><button>LinkedIn</button></a>
+                                <a href="https://drive.google.com/file/d/1OgVRWREYpLHASZvDdHZybzfwq3cP8ybD/view?usp=sharing" class="btn-link"><button>Download CV</button></a>
+                            </div>
                         </div>
 
                         <div class="skill-bar">
@@ -213,37 +243,37 @@ With extensive experience in artificial intelligence and software engineering, I
                 
                     <div class="project">
                         <a href="https://aiexxplorer.github.io/ChatBot-Jarvis/" target="_blank">
-                            <img src="https://utfs.io/f/750adfcb-f783-4f2f-9bb5-f57f1a680b40-tmf4h4.gif" alt="ChatBot Jarvis">
+                            <img src="https://utfs.io/f/750adfcb-f783-4f2f-9bb5-f57f1a680b40-tmf4h4.gif" alt="ChatBot Jarvis" loading="lazy">
                         </a>
                     </div>
                     
                     <div class="project">
                         <a href="https://github.com/AIExxplorer/ACERVO_DE_TECNOLOGIA" target="_blank">
-                            <img src="https://utfs.io/f/021e1e1f-be6a-410c-8445-88b27bce8964-7kj6bl.gif" alt="Acervo de Tecnologia">
+                            <img src="https://utfs.io/f/021e1e1f-be6a-410c-8445-88b27bce8964-7kj6bl.gif" alt="Acervo de Tecnologia" loading="lazy">
                         </a>
                     </div>
                     
                     <div class="project">
                         <a href="https://github.com/AIExxplorer/ACERVO_DE_PSICOLOGIA" target="_blank">
-                            <img src="https://utfs.io/f/e91740a8-783c-48a2-8466-73e71abb0e1f-o6e9db.gif" alt="Acervo de Psicologia">
+                            <img src="https://utfs.io/f/e91740a8-783c-48a2-8466-73e71abb0e1f-o6e9db.gif" alt="Acervo de Psicologia" loading="lazy">
                         </a>
                     </div>
                     
                     <div class="project">
                         <a href="https://github.com/AIExxplorer/ACERVO_DE_MEDICINA_VETERINARIA" target="_blank">
-                            <img src="https://utfs.io/f/LHbyWnn8DdVPAnQPhWsaBlNJLMwyfgx6q0149QGtRbDIc2ZX" alt="Acervo de Medicina Veterinária">
+                            <img src="https://utfs.io/f/LHbyWnn8DdVPAnQPhWsaBlNJLMwyfgx6q0149QGtRbDIc2ZX" alt="Acervo de Medicina Veterinária" loading="lazy">
                         </a>
                     </div>
                     
                     <div class="project">
                         <a href="https://github.com/Artificial-Universe?view_as=public" target="_blank">
-                            <img src="https://utfs.io/f/6ov3IFp9DdJy3TpI7WVHkeuVta8RFIG3Awh9DciZljmrs0bQ" alt="Organização Artificial Universe">
+                            <img src="https://utfs.io/f/6ov3IFp9DdJy3TpI7WVHkeuVta8RFIG3Awh9DciZljmrs0bQ" alt="Organização Artificial Universe" loading="lazy">
                         </a>
                     </div>
                     
                     <div class="project">
                         <a href="https://a.co/d/80By264" target="_blank">
-                            <img src="https://utfs.io/f/6ov3IFp9DdJyVhYqHfxK39lRn65LDuwzJaFfrqc8GjS7tMpv" alt="Livro Como Pensar">
+                            <img src="https://utfs.io/f/6ov3IFp9DdJyVhYqHfxK39lRn65LDuwzJaFfrqc8GjS7tMpv" alt="Livro Como Pensar" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -266,13 +296,13 @@ With extensive experience in artificial intelligence and software engineering, I
                         <h3>Website</h3>
                         <p>https://www.artificialuniverse.tech</p>
                     </div>
-                    <form onsubmit="sendEmail(event)">
+                    <form onsubmit="sendEmail(event)" class="contact-form">
                         <h2>Send Me A Message 
                             <div class="SocialLinks">
-                                <a href="https://linkedin.com/in/AIExxplorer"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="https://github.com/AIExxplorer"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://www.instagram.com/artificialuniverseorg/"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://github.com/Artificial-Universe"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com/in/AIExxplorer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/AIExxplorer" aria-label="GitHub Personal"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.instagram.com/artificialuniverseorg/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://github.com/Artificial-Universe" aria-label="GitHub Organization"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </h2>
                         <input type="text" name="name" placeholder="Name" required>
@@ -285,6 +315,8 @@ With extensive experience in artificial intelligence and software engineering, I
                     </footer>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+        </div>
     </main>
 </body>
 </html>
